@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #020617;
+}
+
+.react-flow__handle {
+  background: #3b82f6 !important;
+  border: 2px solid #0f172a !important;
+  width: 8px !important;
+  height: 8px !important;
+}
+
+.react-flow__edge-path {
+  stroke-width: 2.5;
+  stroke-dasharray: 4;
+  animation: flow-dash 15s linear infinite;
+}
+
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+/* Hide default react-flow attribution for cleaner layout */
+.react-flow__panel.bottom.right {
+  display: none !important;
+}
